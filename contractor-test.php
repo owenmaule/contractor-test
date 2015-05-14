@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <title>Owen Maule submission</title>
-<meta name="description" content="PHP, SQL, Javascript & jQuery test for a contract role." />
+<meta name="description" content="PHP, SQL, Javascript &amp; jQuery test for a contract role." />
 <meta name="author" content="Owen Maule <o@owen-m.com>" />
 <meta name="copyright" content="Copyright Owen Maule 2015" />
 </head>
