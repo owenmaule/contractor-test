@@ -289,6 +289,9 @@ CREATE_SQL_TABLES;
 			echo '<tr><td>', $row[ 'status' ], '</td><td>', $row[ 'name' ], '</td><td>', $row[ 'task_count' ], '</td></tr>';
 		}
 		echo '</tbody></table>';
+		
+		# The above allows visual inspection
+		# To do: Automatic unit test of Q4
 	}
 	
 	/*
