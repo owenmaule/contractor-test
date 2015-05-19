@@ -86,12 +86,11 @@ INPUT;
 		}
 		*/
 
-		# Calculate number of rows
-		$rowCount = ceil( count( $input ) / $cols );
-		$result = array ( );
-		
-		# These are named in the domain of the solution
-		$rowIndex = 0; # Which row we are outputting
+		# Function is badly named - it returns the rows!
+
+		# Named in the domain of the solution
+		# Which row we are outputting
+		$rowIndex = 0; 
 
 		# Lay the values out along the columns, and store them in rows
 		foreach( $input as $value )
@@ -99,7 +98,7 @@ INPUT;
 			# Place values of column one into the first index of each row
 			# Subsequent calls adding to the same row will be into the later columns
 			$result[ $rowIndex ][] = $value;
-			# When reaching the last row, move to next column
+			# When completing the last row, move to next column
 			if( ++$rowIndex == $rowCount )
 			{
 				# Proceed to next column, i.e. second index of each row and so on
