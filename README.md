@@ -42,13 +42,18 @@ Q2. PHP - Complete table_columns()
 		$rowCount = ceil( count( $input ) / $cols );
 		$result = array ( );
 
+		# There are named in the domain of the solution
 		$rowIndex = 0;
 		$colIndex = 0;
+		# Lay the values out along the columns which are then stored as rows
 		foreach( $input as $value )
 		{
+			# Place values of column one into the first index of each row
 			$result[ $rowIndex ][] = $value;
+			# When reaching the last row, move to next column
 			if( ++$rowIndex == $rowCount )
 			{
+				# Proceed to next column, i.e. second index of each row and so on
 				++$colIndex;
 				$rowIndex = 0;
 			}
