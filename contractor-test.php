@@ -90,24 +90,24 @@ INPUT;
 		$rowCount = ceil( count( $input ) / $cols );
 		$result = array ( );
 		
-		# There are named in the domain of the solution
-		$rowIndex = 0;
-		$colIndex = 0;
-		
-		# Lay the values out along the columns which are then stored as rows
+		# These are named in the domain of the solution
+		$rowIndex = 0; # Which row we are outputting
+
+		# Lay the values out along the columns, and store them in rows
 		foreach( $input as $value )
 		{
 			# Place values of column one into the first index of each row
+			# Subsequent calls adding to the same row will be into the later columns
 			$result[ $rowIndex ][] = $value;
 			# When reaching the last row, move to next column
 			if( ++$rowIndex == $rowCount )
 			{
 				# Proceed to next column, i.e. second index of each row and so on
-				++$colIndex;
 				$rowIndex = 0;
 			}
 		}
 		return $result;
+
 	}
 	
 	# Test Q2
