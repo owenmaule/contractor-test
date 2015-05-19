@@ -38,13 +38,15 @@ Q2. PHP - Complete table_columns()
 		// example inputs: $input = array('apple', 'orange', 'monkey', 'potato', 'cheese', 'badger', 'turnip'), $cols = 2
 		// example output: array(array('apple', 'cheese'), array('orange','badger'),...)
 
+		# Function is badly named - it returns the rows!
+
 		# Calculate number of rows
 		$rowCount = ceil( count( $input ) / $cols );
 		$result = array ( );
 
 		# These are named in the domain of the solution
 		$rowIndex = 0; # Which row we are outputting
-		$colIndex = 0; # Which column we are outputting
+
 		# Lay the values out along the columns, and store them in rows
 		foreach( $input as $value )
 		{
@@ -55,7 +57,6 @@ Q2. PHP - Complete table_columns()
 			if( ++$rowIndex == $rowCount )
 			{
 				# Proceed to next column, i.e. second index of each row and so on
-				++$colIndex;
 				$rowIndex = 0;
 			}
 		}
